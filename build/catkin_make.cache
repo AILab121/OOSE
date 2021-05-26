@@ -1,0 +1,2 @@
+mir_robot/mir_actions:mir_robot/mir_description:mir_robot/mir_driver:mir_robot/mir_dwb_critics:mir_robot/mir_gazebo:mir_robot/mir_msgs:mir_robot/mir_navigation:mir_robot/mir_robot:mir_robot/path_coverage_ros:mir_robot/robot5g:mir_robot/sdc21x0
+-DCATKIN_DEVEL_PREFIX=/home/ailab/mir_robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ailab/mir_robot_ws/install -G Unix Makefiles

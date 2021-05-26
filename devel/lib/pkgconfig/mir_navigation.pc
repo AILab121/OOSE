@@ -1,0 +1,8 @@
+prefix=/home/ailab/mir_robot_ws/devel
+
+Name: mir_navigation
+Description: Description of mir_navigation
+Version: 1.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

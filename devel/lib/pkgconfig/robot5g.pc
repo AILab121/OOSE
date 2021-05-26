@@ -1,0 +1,8 @@
+prefix=/home/ailab/mir_robot_ws/devel
+
+Name: robot5g
+Description: Description of robot5g
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

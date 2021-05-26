@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ailab/mir_robot_ws/install/setup.sh

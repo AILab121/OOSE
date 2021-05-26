@@ -1,0 +1,8 @@
+prefix=/home/ailab/mir_robot_ws/devel
+
+Name: boustrophedon_msgs
+Description: Description of boustrophedon_msgs
+Version: 0.0.1
+Cflags: -I/home/ailab/mir_robot_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
