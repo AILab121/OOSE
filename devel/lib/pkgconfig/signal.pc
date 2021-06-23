@@ -1,0 +1,8 @@
+prefix=/home/ailab/mir_robot_ws/devel
+
+Name: signal
+Description: Description of signal
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

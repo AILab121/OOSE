@@ -20,18 +20,6 @@ BUILD_GMOCK:BOOL=ON
 //Build dynamically-linked binaries
 BUILD_SHARED_LIBS:BOOL=ON
 
-//Build the testing tree.
-BUILD_TESTING:BOOL=OFF
-
-//Activate the debug messages of the script FindBoost
-Boost_DEBUG:BOOL=OFF
-
-//The directory containing a CMake configuration file for Boost.
-Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0
-
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=/usr/include
-
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
@@ -51,26 +39,6 @@ CATKIN_SYMLINK_INSTALL:BOOL=OFF
 //List of ';' separated packages to build
 CATKIN_WHITELIST_PACKAGES:STRING=
 
-//Link with static Boost libraries
-CGAL_Boost_USE_STATIC_LIBS:BOOL=OFF
-
-//Display memory and real time usage at end of CTest test outputs
-CGAL_CTEST_DISPLAY_MEM_AND_TIME:BOOL=OFF
-
-//Activate the CGAL developers mode. See https://github.com/CGAL/cgal/wiki/CGAL_DEV_MODE
-CGAL_DEV_MODE:BOOL=OFF
-
-//The directory containing a CMake configuration file for CGAL.
-CGAL_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/CGAL
-
-//If set, the ctest command will not skip the tests of the draw
-// functions.
-CGAL_TEST_DRAW_FUNCTIONS:BOOL=OFF
-
-//Use CGAL with GMPXX: use C++ classes of GNU MP instead of CGAL
-// wrappers
-CGAL_WITH_GMPXX:BOOL=OFF
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -79,7 +47,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=RelWithDebugInfo
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -110,9 +78,6 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Flags used by the CXX compiler during RELWITHDEBUGINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBUGINFO:STRING=
-
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
@@ -139,9 +104,6 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Flags used by the C compiler during RELWITHDEBUGINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBUGINFO:STRING=
-
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
@@ -159,9 +121,6 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
-
-//Flags used by the linker during RELWITHDEBUGINFO builds.
-CMAKE_EXE_LINKER_FLAGS_RELWITHDEBUGINFO:STRING=
 
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
@@ -243,10 +202,6 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 // RELWITHDEBINFO builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Flags used by the linker during the creation of modules during
-// RELWITHDEBUGINFO builds.
-CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBUGINFO:STRING=
-
 //Path to a program.
 CMAKE_NM:FILEPATH=/usr/bin/nm
 
@@ -306,10 +261,6 @@ CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
 // during RELWITHDEBINFO builds.
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Flags used by the linker during the creation of shared libraries
-// during RELWITHDEBUGINFO builds.
-CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBUGINFO:STRING=
-
 //If set, runtime paths are not added when installing shared libraries,
 // but are added when building.
 CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
@@ -337,10 +288,6 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 // during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Flags used by the linker during the creation of static libraries
-// during RELWITHDEBUGINFO builds.
-CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBUGINFO:STRING=
-
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
@@ -358,14 +305,6 @@ EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
 
 //Empy script
 EMPY_SCRIPT:STRING=/usr/lib/python3/dist-packages/em.py
-
-//The directory containing the GMP header files
-GMP_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
-
-//Path to the GMP library
-GMP_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmp.so
-
-GMP_LIBRARIES_DIR:FILEPATH=/usr/lib/x86_64-linux-gnu
 
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
@@ -394,14 +333,6 @@ LSB_FOUND:BOOL=TRUE
 
 //Path to a program.
 LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
-
-//The directory containing the MPFR header files
-MPFR_INCLUDE_DIR:PATH=/usr/include
-
-//Path to the MPFR library
-MPFR_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmpfr.so
-
-MPFR_LIBRARIES_DIR:FILEPATH=/usr/lib/x86_64-linux-gnu
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
@@ -456,24 +387,6 @@ actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
 //The directory containing a CMake configuration file for angles.
 angles_DIR:PATH=/opt/ros/noetic/share/angles/cmake
-
-//The directory containing a CMake configuration file for boost_headers.
-boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
-
-//Value Computed by CMake
-boustrophedon_msgs_BINARY_DIR:STATIC=/home/ailab/mir_robot_ws/build/mir_robot/boustrophedon_planner/boustrophedon_msgs
-
-//The directory containing a CMake configuration file for boustrophedon_msgs.
-boustrophedon_msgs_DIR:PATH=/home/ailab/mir_robot_ws/devel/share/boustrophedon_msgs/cmake
-
-//Value Computed by CMake
-boustrophedon_msgs_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/boustrophedon_planner/boustrophedon_msgs
-
-//Value Computed by CMake
-boustrophedon_server_BINARY_DIR:STATIC=/home/ailab/mir_robot_ws/build/mir_robot/boustrophedon_planner/boustrophedon_server
-
-//Value Computed by CMake
-boustrophedon_server_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/boustrophedon_planner/boustrophedon_server
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
@@ -668,12 +581,6 @@ path_coverage_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/path_cove
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
-//Value Computed by CMake
-robot5g_BINARY_DIR:STATIC=/home/ailab/mir_robot_ws/build/mir_robot/robot5g
-
-//Value Computed by CMake
-robot5g_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/robot5g
-
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
 
@@ -701,9 +608,6 @@ roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 
-//The directory containing a CMake configuration file for rosparam_shortcuts.
-rosparam_shortcuts_DIR:PATH=/opt/ros/noetic/share/rosparam_shortcuts/cmake
-
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
@@ -721,6 +625,12 @@ sdc21x0_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/sdc21x0
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
+
+//Value Computed by CMake
+signal_BINARY_DIR:STATIC=/home/ailab/mir_robot_ws/build/mir_robot/signal
+
+//Value Computed by CMake
+signal_SOURCE_DIR:STATIC=/home/ailab/mir_robot_ws/src/mir_robot/signal
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
@@ -754,19 +664,9 @@ xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_DEBUG
-Boost_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_DIR
-Boost_DIR-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/ailab/mir_robot_ws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/ailab/mir_robot_ws/build/test_results
-//ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
-CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-//CGAL library is configured to use GMP
-CGAL_USE_GMP:INTERNAL=TRUE
-//CGAL library is configured to use MPFR
-CGAL_USE_MPFR:INTERNAL=TRUE
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -803,8 +703,6 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBUGINFO
-CMAKE_CXX_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
@@ -821,8 +719,6 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBUGINFO
-CMAKE_C_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Executable file format
@@ -837,8 +733,6 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBUGINFO
-CMAKE_EXE_LINKER_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
@@ -910,8 +804,6 @@ CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBUGINFO
-CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
@@ -938,8 +830,6 @@ CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_SHARED_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBUGINFO
-CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SKIP_INSTALL_RPATH
 CMAKE_SKIP_INSTALL_RPATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SKIP_RPATH
@@ -954,20 +844,12 @@ CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBUGINFO
-CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBUGINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STRIP
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //uname command
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][c ][v1.71.0(1.48)]
-//Details about finding GMP
-FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/usr/lib/x86_64-linux-gnu/libgmp.so][/usr/include/x86_64-linux-gnu][v()]
-//Details about finding MPFR
-FIND_PACKAGE_MESSAGE_DETAILS_MPFR:INTERNAL=[/usr/lib/x86_64-linux-gnu/libmpfr.so][/usr/include][v()]
 //Details about finding PY_em
 FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
 //Details about finding PythonInterp
@@ -1002,8 +884,6 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/home/ailab/mir_robot_ws/install
-//ADVANCED property for variable: boost_headers_DIR
-boost_headers_DIR-ADVANCED:INTERNAL=1
 generated_dir:INTERNAL=/home/ailab/mir_robot_ws/build/gtest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1

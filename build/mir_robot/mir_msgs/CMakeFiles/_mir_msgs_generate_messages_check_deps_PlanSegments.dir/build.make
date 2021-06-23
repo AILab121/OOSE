@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ailab/mir_robot_ws/build
 include mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/progress.make
 
 mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments:
-	cd /home/ailab/mir_robot_ws/build/mir_robot/mir_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mir_msgs /home/ailab/mir_robot_ws/src/mir_robot/mir_msgs/msg/PlanSegments.msg mir_msgs/PlanSegment:geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Pose:geometry_msgs/PoseStamped
+	cd /home/ailab/mir_robot_ws/build/mir_robot/mir_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mir_msgs /home/ailab/mir_robot_ws/src/mir_robot/mir_msgs/msg/PlanSegments.msg mir_msgs/PlanSegment:std_msgs/Header:geometry_msgs/Pose:geometry_msgs/PoseStamped:geometry_msgs/Quaternion:geometry_msgs/Point
 
 _mir_msgs_generate_messages_check_deps_PlanSegments: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments
 _mir_msgs_generate_messages_check_deps_PlanSegments: mir_robot/mir_msgs/CMakeFiles/_mir_msgs_generate_messages_check_deps_PlanSegments.dir/build.make
