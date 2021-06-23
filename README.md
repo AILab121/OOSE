@@ -3,7 +3,7 @@
 You need to use Ubuntu 20.04 ROS(noetic).
 
 ### Source install
-```bash=
+```bash
 # create a catkin workspace
 mkdir -p ~/{catkin_ws}/src
 cd ~/{catkin_ws}/src/
@@ -28,12 +28,12 @@ source ~/catkin_ws/devel/setup.bash
 ```
 
 ## Gazebo demo(existing map)
-```bash=
+```bash
 # gazebo:
 roslaunch mir_gazebo mir_maze_world.launch
 ```
 - click the "start" button in the Gazebo GUI
-```bash=
+```bash
 # localization:
 roslaunch mir_navigation amcl.launch
 
@@ -44,12 +44,12 @@ rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
 ```
 
 ## Gazebo demo(mapping)
-```bash=
+```bash
 # gazebo:
 roslaunch mir_gazebo mir_maze_world.launch
 ```
 - click the "start" button in the Gazebo GUI
-```bash=
+```bash
 # mapping:
 roslaunch mir_navigation hector_mapping.launch
 
@@ -61,19 +61,19 @@ rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
 ## Adjustment parameters
 - /move_base_node/DWBLocalPlanner
 - **max_speed_xy** can control speed
-```bash=
+```bash
 rosrun rqt_reconfigure rqt_reconfigure
 ```
 
 ## Connect the joystick
-```bash=
+```bash
 roslaunch robot5g teleop_joy.launch
 ```
 
 ## Complete Coverage Path Planning
 - You need to create the map first
 
-```bash=
+```bash
 roslaunch path_coverage path_coverage.launch
 ```
 - Click Publish Point at the top of RViz
@@ -85,7 +85,7 @@ roslaunch path_coverage path_coverage.launch
 ## Signal heat map
 - You need to pay attention to the robot_width in path_coverage.launch and the size of map2darray in heatmap.py
 - Need to change the speed to 0.2
-```bash=
+```bash
 rosrun signal heatmap.py 
 ```
 
@@ -96,6 +96,6 @@ rosrun signal heatmap.py
 - open mir.com
 
 ### Start the Ros driver
-```bash=
+```bash
 roslaunch mir_driver mir.launch
 ```
