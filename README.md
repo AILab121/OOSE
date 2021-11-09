@@ -55,7 +55,10 @@ roslaunch mir_navigation hector_mapping.launch
 
 # navigation:
 roslaunch mir_navigation move_base.xml with_virtual_walls:=false
-rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
+rviz -d $(rospack find mir_navigation)/rviz/navigation.rvizx
+
+# save map:
+rosrun map_server map_saver -f /home/ailab/new_robot_ws/src/mir_robot/mir_gazebo/maps/test
 ```
 
 ## Adjustment parameters
